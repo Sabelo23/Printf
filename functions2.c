@@ -34,7 +34,7 @@ int print_pointer(va_list types, char buffer[],
 	while (num_addrs > 0)
 	{
 		buffer[ind--] = map_to[num_addrs % 16];
-		num_addrs /= 16;
+num_addrs /= 16;
 		length++;
 	}
 
@@ -81,7 +81,7 @@ int print_non_printable(va_list types, char buffer[],
 	{
 		if (is_printable(str[i]))
 			buffer[i + offset] = str[i];
-		else
+else
 			offset += append_hexa_code(str[i], buffer, i + offset);
 
 		i++;
@@ -128,7 +128,7 @@ int print_reverse(va_list types, char buffer[],
 
 	for (i = i - 1; i >= 0; i--)
 	{
-		char z = str[i];
+char z = str[i];
 
 		write(1, &z, 1);
 		count++;
@@ -174,7 +174,7 @@ int print_rot13string(va_list types, char buffer[],
 				x = out[j];
 				write(1, &x, 1);
 				count++;
-				break;
+break;
 			}
 		}
 		if (!in[j])
@@ -186,4 +186,4 @@ int print_rot13string(va_list types, char buffer[],
 	}
 	return (count);
 }
-/* i am a collaborator */
+
